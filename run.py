@@ -13,6 +13,7 @@ email: adeelahmad84@me.com
 
 from markov_python.cc_markov import MarkovChain
 import urllib2
+import unittest
 
 __version__ = "0.1"
 
