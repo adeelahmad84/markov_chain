@@ -11,21 +11,33 @@ email: adeelahmad84@me.com
 
 '''
 
+__version__ = "0.1"
+#git
+
 from markov_python.cc_markov import MarkovChain
-import urllib2
+from lxml import html
+import requests
 import unittest
 
-__version__ = "0.1"
-
 def main():
-    def fun(x):
-        return x + 1
 
-    class MyTest(unittest.TestCase):
-        def test(self):
-            self.assertEqual(fun(3), 4)
+    page = requests.get('http://econpy.pythonanywhere.com/ex/001.html')
+    tree = html.fromstring(page.content)
+
+    #This will create a list of buyers:
+    buyers = tree.xpath('//div[@title="buyer-name"]/text()')
+    #This will create a list of prices
+    prices = tree.xpath('//span[@class="item-price"]/text()')
+
+    print 'Buyers: ', buyers
+    print 'Prices: ', prices
+
 
 if __name__ == "__main__":
     main()
     import doctest
     doctest.testmod()
+    class MyTest(unittest.TestCase):
+        def test(self):
+            self.assertEqual(main(), )
+
