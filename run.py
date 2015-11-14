@@ -18,7 +18,12 @@ import unittest
 __version__ = "0.1"
 
 def main():
-    pass
+    def fun(x):
+        return x + 1
+
+    class MyTest(unittest.TestCase):
+        def test(self):
+            self.assertEqual(fun(3), 4)
 
 if __name__ == "__main__":
     main()
