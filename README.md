@@ -1,0 +1,1 @@
+My first proper Git commit with a real project.
