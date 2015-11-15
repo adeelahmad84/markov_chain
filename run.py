@@ -30,7 +30,6 @@ def main():
     print 'Buyers: ', buyers
     print 'Prices: ', prices
 
-    mc = MarkovChain()
 
 if __name__ == "__main__":
     main()
