@@ -16,11 +16,14 @@ from markov_python.cc_markov import MarkovChain
 import unittest
 
 def main():
+    try:
+        mc = MarkovChain()
+        text = mc.add_file('ascii.txt')
 
-    mc = MarkovChain()
-    text = mc.add_file('ascii.txt')
+        mc.generate_text(text)
 
-    mc.generate_text(text)
+    except ValueError:
+        print "Oops! There's been an issue"
 
 if __name__ == "__main__":
     main()
