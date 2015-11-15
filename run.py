@@ -4,7 +4,6 @@
 '''
 Docstring
 **********
-
 title: Final Project Codecademy
 author: Adeel Ahmad
 email: adeelahmad84@me.com
@@ -12,7 +11,6 @@ email: adeelahmad84@me.com
 '''
 
 __version__ = "0.1"
-#git
 
 from markov_python.cc_markov import MarkovChain
 from lxml import html
@@ -32,6 +30,7 @@ def main():
     print 'Buyers: ', buyers
     print 'Prices: ', prices
 
+    mc = MarkovChain()
 
 if __name__ == "__main__":
     main()
@@ -40,4 +39,3 @@ if __name__ == "__main__":
     class MyTest(unittest.TestCase):
         def test(self):
             self.assertEqual(main(), )
-
